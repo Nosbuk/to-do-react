@@ -1,0 +1,21 @@
+@mixin font-logo {
+  font-family: "Roboto", cursive;
+  font-size: 0.8rem;
+  color: $logo-text-color;
+  letter-spacing: 1px;
+}
+
+@mixin font-aside-headline {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: $main-text-color;
+  letter-spacing: 1px;
+}
+
+@mixin font-aside-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  color: $main-text-color;
+  font-weight: 300;
+}

@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@100;300;400;500;900&display=swap");
+
+@import "./config/reset";
+@import "./config/colors";
+@import "./config/fonts";
+
+@import "./elements/app_layout";
+@import "./elements/header";
+@import "./elements/aside";
+@import "./elements/task_editor";
