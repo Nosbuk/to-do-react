@@ -3,6 +3,7 @@
   font-size: 0.8rem;
   color: $logo-text-color;
   letter-spacing: 1px;
+  font-weight: 300;
 }
 
 @mixin font-aside-headline {
@@ -18,4 +19,32 @@
   font-size: 1.2rem;
   color: $main-text-color;
   font-weight: 300;
+}
+
+@mixin font-editor-label {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  color: $main-text-color;
+  font-weight: 300;
+}
+
+@mixin font-editor-input {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  color: $main-text-color;
+  font-weight: 300;
+}
+
+@mixin section-headline {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  color: $logo-text-color;
+  font-weight: 300;
+}
+
+@mixin section-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: $logo-text-color;
+  font-weight: 500;
 }

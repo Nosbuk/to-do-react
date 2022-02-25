@@ -1,0 +1,11 @@
+.section {
+  padding: 40px;
+
+  &__headline {
+    @include section-headline;
+  }
+
+  &__list {
+    @include section-text;
+  }
+}
