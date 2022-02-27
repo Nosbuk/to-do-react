@@ -8,6 +8,7 @@ export default function Main({ mainContent, setMainContent }) {
     <main>
       {mainContent === "editor" && <TaskEditor setTasks={setTasks} setMainContent={setMainContent} />}
       {mainContent === "planed" && <PlanedTasks setTasks={setTasks} tasks={tasks} />}
+      {}
     </main>
   );
 }

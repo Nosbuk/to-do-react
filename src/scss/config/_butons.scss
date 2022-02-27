@@ -1,0 +1,6 @@
+@mixin theme-button {
+  padding: 10px 20px;
+  background-color: $theme-color;
+  color: $button-text-color;
+  border-radius: 5px;
+}

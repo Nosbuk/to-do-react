@@ -46,8 +46,20 @@
       padding: 10px;
       border-radius: 10px;
     }
+    &__input--category {
+      @include font-editor-label;
+      border: 1px solid $border-color;
+
+      padding: 10px;
+
+      border-radius: 10px;
+    }
     &__input--description {
       resize: none;
+    }
+    &__submit-button {
+      @include theme-button;
+      margin: 20px 40px;
     }
   }
 }

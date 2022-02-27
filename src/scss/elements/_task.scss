@@ -1,18 +1,26 @@
 .task {
-  padding: 20px;
   margin: 10px;
   border: 1px solid $border-color;
   border-radius: 10px;
+  overflow: hidden;
 
-  position: relative;
   &__title {
-    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    background: $aside-background;
+    padding: 10px 20px;
+
+    &__icon {
+      margin-right: 10px;
+    }
   }
+
+  &__description {
+    margin: 20px;
+  }
+
   &__delete-button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 10px;
-    color: $theme-color;
+    margin: 10px 10px 10px auto;
+    color: $logo-text-color;
   }
 }
