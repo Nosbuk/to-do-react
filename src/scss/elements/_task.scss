@@ -3,12 +3,13 @@
   border: 1px solid $border-color;
   border-radius: 10px;
   overflow: hidden;
-
+  width: calc(33% - 30px);
+  font-size: 12px;
   &__title {
     display: flex;
     align-items: center;
     background: $aside-background;
-    padding: 10px 20px;
+    padding: 10px;
 
     &__icon {
       margin-right: 10px;
@@ -20,7 +21,7 @@
   }
 
   &__delete-button {
-    margin: 10px 10px 10px auto;
+    margin-left: auto;
     color: $logo-text-color;
   }
 }

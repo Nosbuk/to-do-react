@@ -1,11 +1,31 @@
 .section {
   padding: 40px;
+  animation: fade-in 1s;
+
+  &__input {
+    &--search {
+      @include section-text;
+      border: 1px solid $border-color;
+      padding: 10px;
+      border-radius: 10px;
+      width: 30%;
+      min-width: 325px;
+      margin: 10px;
+    }
+  }
 
   &__headline {
     @include section-headline;
+    margin-bottom: 20px;
   }
 
   &__list {
     @include section-text;
+    display: flex;
+    flex-wrap: wrap;
+    &__item {
+      display: block;
+      width: 300px;
+    }
   }
 }

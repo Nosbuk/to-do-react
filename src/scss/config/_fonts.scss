@@ -37,9 +37,9 @@
 
 @mixin section-headline {
   font-family: "Roboto", sans-serif;
-  font-size: 1.6rem;
-  color: $logo-text-color;
-  font-weight: 300;
+  font-size: 2rem;
+  color: $main-text-color;
+  font-weight: 500;
 }
 
 @mixin section-text {

@@ -1,9 +1,9 @@
 import React from "react";
 import { HiOutlineX } from "react-icons/hi";
-
+import nextId from "react-id-generator";
 export default function TaskEditor({ setTasks, setMainContent }) {
   const createTask = (title, category, description) => {
-    return { title, category, description };
+    return { title, category, id: nextId(), description };
   };
 
   const handleClick = (e) => {
