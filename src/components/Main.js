@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import TaskEditor from "./TaskEditor";
 import PlanedTasks from "./PlannedTasks";
 import { faker } from "@faker-js/faker";
@@ -6,6 +6,9 @@ import nextId from "react-id-generator";
 import SearchTasks from "./SearchTasks";
 
 export default function Main({ mainContent, setMainContent }) {
+  useEffect(() => {
+    window.history.replaceState(null, "", mainContent);
+  });
   const [tasks, setTasks] = useState(() => {
     let demoArr = [];
     for (let n = 0; n <= 20; n++) {

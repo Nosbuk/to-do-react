@@ -12,7 +12,7 @@ export default function SearchTasks({ tasks, setTasks }) {
       <input onChange={handleSearch} type="text" className="section__input--search" />
       <ul className="section__list">
         {tasks
-          .filter((task) => `${task.title} ${task.description}`.includes(search))
+          .filter((task) => `${task.title} ${task.description}`.toLowerCase().includes(search.toLocaleLowerCase()))
           .map((task, index) => (
             <Task key={index} setTasks={setTasks} task={task} />
           ))}

@@ -4,8 +4,8 @@ import { GoPerson, GoBriefcase } from "react-icons/go";
 
 export default function Task({ setTasks, task }) {
   const iconDictionary = {
-    work: <GoBriefcase className="task__title__icon" />,
-    private: <GoPerson className="task__title__icon" />,
+    work: <GoBriefcase className="task__title__icon" size="1.6rem" />,
+    private: <GoPerson className="task__title__icon" size="1.6rem" />,
   };
   const TaskIcon = ({ category }) => iconDictionary[category];
 
