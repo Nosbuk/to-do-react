@@ -21,7 +21,7 @@ export default function Main({ mainContent, setMainContent }) {
   return (
     <main>
       {mainContent === "editor" && <TaskEditor setTasks={setTasks} setMainContent={setMainContent} />}
-      {mainContent === "planed" && <PlanedTasks setTasks={setTasks} tasks={tasks} />}
+      {mainContent === "planned" && <PlanedTasks setTasks={setTasks} tasks={tasks} />}
       {mainContent === "search" && <SearchTasks setTasks={setTasks} tasks={tasks} />}
     </main>
   );
