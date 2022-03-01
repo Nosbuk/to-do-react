@@ -3,6 +3,7 @@
   animation: fade-in 0.5s;
   overflow: scroll;
   height: calc(100vh - 70px);
+  padding-bottom: 150px;
 
   &__input {
     &--search {
