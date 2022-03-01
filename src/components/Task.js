@@ -21,19 +21,6 @@ export default function Task({ setTasks, task }) {
       threshold: 0,
     };
   }, []);
-  useEffect(() => {
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-    const currentTarget = targetRef.current;
-    if (currentTarget) {
-      observer.observe(currentTarget);
-    }
-    return () => observer.unobserve(currentTarget);
-  });
-  const iconDictionary = {
-    work: <GoBriefcase className="task__title__icon" size="1.6rem" />,
-    private: <GoPerson className="task__title__icon" size="1.6rem" />,
-  };
-  const TaskIcon = ({ category }) => iconDictionary[category];
 
   const handleClick = () => {
     setTasks((tasks) => tasks.filter((item) => item.id !== task.id));
