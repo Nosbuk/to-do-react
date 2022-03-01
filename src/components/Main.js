@@ -9,14 +9,17 @@ export default function Main({ mainContent, setMainContent }) {
   useEffect(() => {
     window.history.replaceState(null, "", mainContent);
   });
-  const [tasks, setTasks] = useState(() => {
+
+  const generateRandomTasks = () => {
     let demoArr = [];
     for (let n = 0; n <= 20; n++) {
       demoArr = [...demoArr, { title: faker.commerce.productName(), category: n % 2 === 0 ? "work" : "private", id: nextId(), description: `${faker.commerce.productDescription()}. `.repeat(2) }];
     }
     console.log(demoArr);
     return demoArr;
-  });
+  };
+
+  const [tasks, setTasks] = useState(generateRandomTasks());
 
   return (
     <main>

@@ -4,7 +4,7 @@ import Aside from "./components/Aside";
 import Main from "./components/Main";
 
 export default function App() {
-  const [mainContent, setMainContent] = useState("planed");
+  const [mainContent, setMainContent] = useState("planned");
   const [categories, setCategories] = useState([]);
   return (
     <div className="App">

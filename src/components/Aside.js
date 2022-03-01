@@ -1,7 +1,7 @@
 import React from "react";
 import { GoRepo, GoSearch, GoPerson, GoBriefcase } from "react-icons/go";
 
-export default function Aside({ setMainContent, mainContent }) {
+export default function Aside({ setMainContent, mainContent, setCategories, Categories }) {
   const handleClick = (e) => {
     setMainContent(e.target.id);
     console.log(e.target.id);
@@ -19,6 +19,9 @@ export default function Aside({ setMainContent, mainContent }) {
           <GoSearch className="aside__list__icon" size="1.8rem" />
           Search Tasks
         </li>
+      </ul>
+      <h2 className="aside__headline">Categories</h2>
+      <ul className="aside__list">
         <li style={resolveBackground("work")} id="work" onClick={handleClick} className="aside__list__item">
           <GoBriefcase className="aside__list__icon" size="1.8rem" />
           Work

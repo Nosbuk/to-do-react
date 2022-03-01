@@ -14,7 +14,7 @@ export default function TaskEditor({ setTasks, setMainContent }) {
     e.preventDefault();
     console.log(e);
     setTasks((tasks) => [createTask(e.target[0].value, e.target[1].value, e.target[2].value), ...tasks]);
-    setMainContent("planed");
+    setMainContent("planned");
   };
 
   return (
