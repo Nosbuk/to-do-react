@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { GiBookPile } from "react-icons/gi";
+import { MainContentContext } from "../App";
 
-export default function Header({ setMainContent }) {
+export default function Header() {
+  const [, setMainContent] = useContext(MainContentContext);
   const handleClick = () => {
     setMainContent("editor");
   };

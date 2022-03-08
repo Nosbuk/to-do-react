@@ -30,8 +30,8 @@ export default function Task({ setTasks, task }) {
     return () => observer.unobserve(currentTarget);
   });
   const iconDictionary = {
-    work: <GoBriefcase className="task__title__icon" size="1.6rem" />,
-    private: <GoPerson className="task__title__icon" size="1.6rem" />,
+    Work: <GoBriefcase className="task__title__icon" size="1.6rem" />,
+    Private: <GoPerson className="task__title__icon" size="1.6rem" />,
   };
   const TaskIcon = ({ category }) => iconDictionary[category];
 
@@ -47,6 +47,7 @@ export default function Task({ setTasks, task }) {
           <HiOutlineTrash size="1rem" />
         </button>
       </div>
+      <p className="task__description">{task.date.toLocaleDateString()}</p>
       <p className="task__description">{task.description}</p>
     </li>
   );

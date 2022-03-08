@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { HiOutlineX } from "react-icons/hi";
 import nextId from "react-id-generator";
-export default function TaskEditor({ setTasks, setMainContent }) {
-  const createTask = (title, category, description) => {
-    return { title, category, id: nextId(), description };
+import { MainContentContext } from "../App";
+import "react-datepicker/dist/react-datepicker.css";
+import "react-dropdown/style.css";
+import DatePicker from "react-datepicker";
+import Dropdown from "react-dropdown";
+
+export default function TaskEditor({ setTasks }) {
+  const [startDate, setStartDate] = useState(new Date());
+  const [category, setCategory] = useState("");
+  const [, setMainContent] = useContext(MainContentContext);
+  const createTask = (title, category, date, description) => {
+    return { title, category, date, id: nextId(), description };
   };
 
   const handleClick = (e) => {
@@ -12,10 +21,11 @@ export default function TaskEditor({ setTasks, setMainContent }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e);
-    setTasks((tasks) => [createTask(e.target[0].value, e.target[1].value, e.target[2].value), ...tasks]);
+    setTasks((tasks) => [createTask(e.target[0].value, category, startDate, e.target[2].value), ...tasks]);
     setMainContent("planned");
   };
+
+  const dropdownOptions = ["Work", "Private"];
 
   return (
     <section className="task-editor">
@@ -26,15 +36,15 @@ export default function TaskEditor({ setTasks, setMainContent }) {
         <label htmlFor="title" className="task-editor__form__label">
           Title:
         </label>
-        <input name="title" type="text" className="task-editor__form__input--title" />
+        <input name="title" type="text" className="task-editor__form__input" />
         <label htmlFor="category" className="task-editor__form__label">
           Category:
         </label>
-        <select name="category" className="task-editor__form__input--category">
-          <option value="work">Work</option>
-          <option value="private">Private</option>
-        </select>
-
+        <Dropdown onChange={(option) => setCategory(option.value)} options={dropdownOptions} placeholder="Select category" />
+        <label htmlFor="date" className="task-editor__form__label">
+          Date:
+        </label>
+        <DatePicker popperPlacement="bottom" className="task-editor__form__input" selected={startDate} onChange={(date) => setStartDate(date)} />{" "}
         <label htmlFor="description" className="task-editor__form__label">
           Description:
         </label>

@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { GoRepo, GoSearch, GoPerson, GoBriefcase } from "react-icons/go";
+import { MainContentContext } from "../App";
 
-export default function Aside({ setMainContent, mainContent, setCategories, Categories }) {
+export default function Aside() {
+  const [mainContent, setMainContent] = useContext(MainContentContext);
   const handleClick = (e) => {
     setMainContent(e.target.id);
     console.log(e.target.id);

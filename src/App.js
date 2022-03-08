@@ -1,16 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Aside from "./components/Aside";
 import Main from "./components/Main";
+export const MainContentContext = React.createContext();
 
 export default function App() {
   const [mainContent, setMainContent] = useState("planned");
   const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    window.history.replaceState(null, "", mainContent);
+  });
+
   return (
     <div className="App">
-      <Header setMainContent={setMainContent} />
-      <Aside setMainContent={setMainContent} mainContent={mainContent} setCategories={setCategories} categories={categories} />
-      <Main setMainContent={setMainContent} mainContent={mainContent} setCategories={setCategories} categories={categories} />
+      <MainContentContext.Provider value={[mainContent, setMainContent]}>
+        <Header />
+        <Aside setCategories={setCategories} categories={categories} />
+        <Main setCategories={setCategories} categories={categories} />
+      </MainContentContext.Provider>
     </div>
   );
 }
