@@ -5,10 +5,11 @@
   overflow: hidden;
   width: calc(33% - 30px);
   font-size: 12px;
-  transform: translate(200px, 200px);
+  transform: translate(150px, 150px);
   opacity: 0;
   transition: 1s ease-out;
-
+  display: flex;
+  flex-direction: column;
   &.show {
     opacity: 1;
     transform: translate(0);
@@ -19,6 +20,8 @@
     align-items: center;
     background: $aside-background;
     padding: 10px;
+    width: 100%;
+    height: 43px;
 
     &__icon {
       margin-right: 10px;
@@ -28,8 +31,26 @@
   }
 
   &__description {
+    margin: auto 20px 20px 20px;
+    font-weight: 300;
+  }
+
+  &__date {
     margin: 20px;
     font-weight: 300;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    &__icon {
+      margin-left: 10px;
+      &.late {
+        color: $theme-warn;
+      }
+      &.planned {
+        color: $theme-info;
+        transform: translateY(-1.5px);
+      }
+    }
   }
 
   &__delete-button {

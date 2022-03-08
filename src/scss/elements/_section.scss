@@ -4,6 +4,7 @@
   overflow: scroll;
   height: calc(100vh - 70px);
   padding-bottom: 150px;
+  overflow-x: hidden;
 
   &__input {
     &--search {
@@ -14,6 +15,9 @@
       width: 30%;
       min-width: 325px;
       margin: 10px;
+      &::placeholder {
+        opacity: 0.6;
+      }
     }
   }
 

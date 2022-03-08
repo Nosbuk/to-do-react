@@ -1,0 +1,59 @@
+.category-editor {
+  position: relative;
+  .Dropdown-control {
+    display: flex;
+    align-items: center;
+    border: 1px solid $border-color;
+    @include font-editor-input;
+    padding: 10px;
+    border-radius: 10px;
+    width: 80px;
+    height: 80px;
+
+    margin: 20px 0;
+  }
+  .Dropdown-title {
+    display: none;
+  }
+  .Dropdown-menu {
+    border-top-right-radius: 10px;
+    max-height: 300px;
+  }
+  .Dropdown-group {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .Dropdown-arrow {
+    transform: translateY(22px);
+  }
+
+  &__input {
+    border: 1px solid $border-color;
+    @include font-editor-input;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    margin: 20px 0;
+    background: #fff;
+  }
+  &__label {
+    @include font-editor-label;
+  }
+
+  &__dropdown {
+    &__icon {
+      color: $theme-color;
+      margin: 5px;
+      pointer-events: none;
+    }
+  }
+  &__submit-button {
+    @include theme-button;
+    margin: 20px auto;
+  }
+  &__close-button {
+    @extend .task-editor__close-button;
+  }
+}

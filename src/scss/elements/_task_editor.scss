@@ -10,6 +10,15 @@
   opacity: 0;
   animation: fade-in 0.5s forwards;
 
+  .react-datepicker__day--keyboard-selected,
+  .react-datepicker__day--selected {
+    background: $theme-color;
+  }
+
+  .Dropdown-option.is-selected {
+    display: none;
+  }
+
   &__close-button {
     position: absolute;
     right: 0;
@@ -21,7 +30,7 @@
     justify-content: center;
     padding: 5px;
     margin: 10px;
-    font-size: 25px;
+    font-size: 15px;
     border-radius: 50%;
 
     * {
@@ -59,37 +68,4 @@
       margin: 20px 40px;
     }
   }
-}
-
-body .react-datepicker__day--keyboard-selected,
-body .react-datepicker__day--selected {
-  background: $theme-color;
-}
-
-body .Dropdown-control {
-  border: 1px solid $border-color;
-  @include font-editor-input;
-  padding: 10px;
-  border-radius: 10px;
-  width: 100%;
-}
-
-body .Dropdown-menu {
-  border: 1px solid $border-color;
-  @include font-editor-input;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-body .Dropdown-root.is-open .Dropdown-control {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-body .Dropdown-option.is-selected {
-  display: none;
-}
-
-body .Dropdown-arrow {
-  transform: translateY(4px);
 }

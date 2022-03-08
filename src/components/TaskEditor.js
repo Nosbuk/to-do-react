@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { HiOutlineX } from "react-icons/hi";
 import nextId from "react-id-generator";
-import { MainContentContext } from "../App";
+import { CategoriesContentContext, MainContentContext } from "../App";
 import "react-datepicker/dist/react-datepicker.css";
 import "react-dropdown/style.css";
 import DatePicker from "react-datepicker";
@@ -9,6 +9,7 @@ import Dropdown from "react-dropdown";
 
 export default function TaskEditor({ setTasks }) {
   const [startDate, setStartDate] = useState(new Date());
+  const [categories] = useContext(CategoriesContentContext);
   const [category, setCategory] = useState("");
   const [, setMainContent] = useContext(MainContentContext);
   const createTask = (title, category, date, description) => {
@@ -25,7 +26,7 @@ export default function TaskEditor({ setTasks }) {
     setMainContent("planned");
   };
 
-  const dropdownOptions = ["Work", "Private"];
+  const dropdownOptions = categories.map((category) => category.name);
 
   return (
     <section className="task-editor">

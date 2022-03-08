@@ -1,0 +1,28 @@
+body .Dropdown-control {
+  border: 1px solid $border-color;
+  @include font-editor-input;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+body .Dropdown-menu {
+  border: 1px solid $border-color;
+  @include font-editor-input;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+body .Dropdown-root.is-open .Dropdown-control {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+body .Dropdown-arrow {
+  transform: translateY(4px);
+}
+
+html body .App .Dropdown-option,
+.Dropdown-option.isSelected {
+  border-radius: 10px;
+}
