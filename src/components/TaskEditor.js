@@ -17,7 +17,7 @@ export default function TaskEditor({ setTasks }) {
   };
 
   const handleClick = (e) => {
-    e.target.className === "task-editor__close-button" && setMainContent("planed");
+    e.target.className === "task-editor__close-button" && setMainContent("planned");
   };
 
   const handleSubmit = (e) => {

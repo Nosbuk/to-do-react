@@ -23,7 +23,7 @@ export default function Main() {
     setSearch(event.target.value);
   };
 
-  const filterTasks = (tasks) => tasks.filter((task) => `${task.title} ${task.description}`.toLowerCase().includes(search.toLocaleLowerCase()));
+  const filterTasks = (tasks) => tasks.filter((task) => `${task.title} ${task.description}`.toLowerCase().includes(search.toLowerCase()));
 
   const resolveHeadline = (content) => {
     return `${content[0].toUpperCase()}${content.slice(1)}`;

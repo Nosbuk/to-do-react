@@ -3,13 +3,15 @@
   border: 1px solid $border-color;
   border-radius: 10px;
   overflow: hidden;
-  width: calc(33% - 30px);
   font-size: 12px;
   transform: translate(150px, 150px);
   opacity: 0;
   transition: 1s ease-out;
+  width: 350px;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
+  max-width: 30%;
   &.show {
     opacity: 1;
     transform: translate(0);
