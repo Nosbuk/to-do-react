@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { CategoriesContentContext } from "../App";
+import { CategoriesContentContext } from "./MainAppView";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 import Icon from "./Icon";

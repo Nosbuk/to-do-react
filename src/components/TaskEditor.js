@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { HiOutlineX } from "react-icons/hi";
 import nextId from "react-id-generator";
-import { CategoriesContentContext, MainContentContext } from "../App";
+import { CategoriesContentContext, MainContentContext } from "./MainAppView";
 import "react-datepicker/dist/react-datepicker.css";
 import "react-dropdown/style.css";
 import DatePicker from "react-datepicker";

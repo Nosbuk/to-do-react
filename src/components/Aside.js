@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { GoRepo, GoCalendar, GoBell } from "react-icons/go";
-import { CategoriesContentContext, MainContentContext } from "../App";
+import { CategoriesContentContext, MainContentContext } from "./MainAppView";
 import Icon from "./Icon";
 import CategoryEditor from "./CategoryEditor";
 

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { HiOutlineTrash } from "react-icons/hi";
 import { GoBell, GoCalendar } from "react-icons/go";
 import Icon from "./Icon";
-import { CategoriesContentContext } from "../App";
+import { CategoriesContentContext } from "./MainAppView";
 
 export default function Task({ setTasks, task }) {
   const [categories] = useContext(CategoriesContentContext);

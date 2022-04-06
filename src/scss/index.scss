@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@100;300;400;500;900&display=swap");
 
-@import "./config/reset";
-@import "./config/colors";
-@import "./config/fonts";
-@import "./config/animations";
-@import "./config/buttons";
-@import "./config/react_dropdown";
+@import "./generic/reset";
+@import "./generic/colors";
+@import "./generic/fonts";
+@import "./generic/animations";
+@import "./generic/buttons";
+@import "./generic/popups";
+@import "./generic/react_dropdown";
 @import "./elements/app_layout";
 @import "./elements/sign";
 @import "./elements/header";

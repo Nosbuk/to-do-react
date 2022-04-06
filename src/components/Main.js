@@ -3,7 +3,7 @@ import TaskEditor from "./TaskEditor";
 import Task from "./Task";
 import { faker } from "@faker-js/faker";
 import nextId from "react-id-generator";
-import { MainContentContext } from "../App";
+import { MainContentContext } from "./MainAppView";
 
 export default function Main() {
   const [mainContent] = useContext(MainContentContext);
